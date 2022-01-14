@@ -1,0 +1,32 @@
+server:
+  port: 9592
+  
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info,beans
+#    
+#  
+#  endpoint:
+#    health:
+#      show-details: always
+management:
+  endpoints:
+    web:
+      base-path: "/macys-order-info"
+      exposure:
+        include: "info"
+      
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/macy_test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Saketh1@
+  jpa:
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
